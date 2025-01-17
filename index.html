@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshith Counter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #intial{
+            font-size: 20px;
+            width: 3%;
+            height: 30px;
+            border: none;
+            outline: none;
+            padding-left: 30px;
+        }
+
+        #dec{
+            color: black;
+            background-color: rgb(41, 124, 248);
+            border: none;
+            outline: none;
+            font-size:25px;
+            width: 40px;
+            height: 40px;
+
+        }
+
+        
+        #inc{
+            color: black;
+            background-color: rgb(41, 124, 248);
+            border: none;
+            outline: none;
+            font-size:20px;
+            width: 40px;
+            height: 40px;
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <button id="dec" onclick="appenddec()">-</button>
+    <input type="text" id="intial" value="0">
+    <button id="inc" onclick="appendinc()">+</button>
+</body>
+<script>
+    function appendinc(){
+    let input=document.getElementById('intial');
+
+     if(input.value==100){
+        alert("cannot increment beyond this");
+     }  
+     else{
+        input.value=parseInt(input.value)+1; 
+
+     }
+   }
+   function appenddec(){
+    let input=document.getElementById('intial');
+
+       
+     if(input.value==0){
+        alert("cannot decrement beyond this");
+     }
+     else{
+        input.value=parseInt(input.value)-1; 
+
+     }
+   }
+</script>
+</html>
